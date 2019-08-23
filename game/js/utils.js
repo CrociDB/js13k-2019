@@ -2,6 +2,7 @@
 const gId = t => document.getElementById(t);
 const qSel = t => document.querySelector(t);
 const qSelA = t => document.querySelectorAll(t);
+const gSh = t => gId(t).text;
 
 // Text utils
 const repltxt = (t, vs) => {

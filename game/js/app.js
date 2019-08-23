@@ -20,7 +20,6 @@ class App {
             let req = new XMLHttpRequest();
             req.addEventListener("load", () => {
                 s.innerHTML = req.responseText;
-                console.log("Loaded ", s);
                 if (++loaded >= shaders.length) {
                     finishCallback();
                 }
@@ -35,10 +34,16 @@ class App {
     }
     
     _init() {
+        this.canvas.init();
+
+        this.shader = new Shader(this.canvas.gl);
+        this.shader.setShaders(gSh("sh-vert"), gSh("sh-frag-game"));
+
         window.requestAnimationFrame(this.update.bind(this));
     }
     
     update() {
+        this.shader.use();
         this.canvas.update();
 
         window.requestAnimationFrame(this.update.bind(this));
