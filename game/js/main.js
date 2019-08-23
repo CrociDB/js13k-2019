@@ -1,3 +1,4 @@
+let app = new App();
 (function() {
-    console.log("Start game...");
+    app.init();
 })();
