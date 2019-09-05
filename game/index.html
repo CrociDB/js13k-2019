@@ -5,14 +5,14 @@
     </head>
     <body>
         <!-- Dialog -->
-        <div id="dialog" class="dialog">
+        <div id="dialog" class="dialog hidden">
             <div class="message">
                 <p>This is a dialog. This is a dialog. This is a dialog. This is a dialog. This is a dialog.</p>
             </div>
             <div class="author"><span>&#8212; Daisy Walker</span></div>
         </div>
 
-        <div id="choice" class="dialog">
+        <div id="choice" class="dialog hidden">
             <ul>
                 <li id="c1" class="message"><a href="javascript:;">Choice 1: do something</a></li>
                 <li id="c2" class="message"><a href="javascript:;">Choice 2: do something else</a></li>
@@ -20,7 +20,10 @@
         </div>
 
         <!-- Scripts -->
+        <script src="js/jsfxr.js"></script>
+        <script src="js/data.js"></script>
         <script src="js/utils.js"></script>
+        <script src="js/dialog.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
